@@ -10,6 +10,11 @@ import { WrapComponent } from './examples/wrap/wrap.component';
 import { RestrictComponent } from './examples/restrict/restrict.component';
 import { RestrictAxisComponent } from './examples/restrict-axis/restrict-axis.component';
 import { DialogComponent } from './examples/dialog/dialog.component';
+import { ContainerControlComponent } from './examples/container-control/container-control.component';
+import { DisableDragComponent } from './examples/disable-drag/disable-drag.component';
+import { DelayDragComponent } from './examples/delay-drag/delay-drag.component';
+import { SortableTableComponent } from './examples/sortable-table/sortable-table.component';
+import { SortableTabComponent } from './examples/sortable-tab/sortable-tab.component';
 
 export const routes: Routes = [
     { path: 'examples/basic', component: BasicComponent },
@@ -24,5 +29,11 @@ export const routes: Routes = [
     //RestrictAxisComponent
     { path: 'examples/restrict-axis', component: RestrictAxisComponent },
     { path: 'examples/dialog', component: DialogComponent },
+    { path: 'examples/container-control', component: ContainerControlComponent },
+    { path: 'examples/disable-drag', component: DisableDragComponent },
+    { path: 'examples/delay-drag', component: DelayDragComponent },
+    { path: 'examples/sortable-table', component: SortableTableComponent },
+    { path: 'examples/sortable-tab', component: SortableTabComponent },
+
 
 ];

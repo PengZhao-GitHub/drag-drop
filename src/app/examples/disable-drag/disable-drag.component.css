@@ -1,29 +1,32 @@
 .example-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 505px;
+    width: 500px;
     max-width: 100%;
-    gap: 15px;
-    padding: 15px;
     border: solid 1px #ccc;
     min-height: 60px;
+    display: block;
+    background: white;
     border-radius: 4px;
     overflow: hidden;
-    /* background-color: aqua; */
   }
   
   .example-box {
     padding: 20px 10px;
-    border: solid 1px #ccc;
-    border-radius: 4px;
+    border-bottom: solid 1px #ccc;
     color: rgba(0, 0, 0, 0.87);
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     box-sizing: border-box;
     cursor: move;
     background: white;
-    text-align: center;
     font-size: 14px;
-    min-width: 115px;
+  }
+  
+  .example-box.cdk-drag-disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    user-select: none;
   }
   
   .cdk-drag-preview {
@@ -39,6 +42,14 @@
   }
   
   .cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+  .example-box:last-child {
+    border: none;
+  }
+  
+  .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
   }
   
